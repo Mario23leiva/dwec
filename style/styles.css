@@ -1,3 +1,7 @@
+*{
+    /*border: #333 1px solid;*/
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -49,3 +53,216 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+.window{
+    width: 99%;
+    height: 100%;
+    border: #333 solid 3px;
+    border-radius: 10px;
+}
+
+.toptap{
+    background: linear-gradient(to bottom, #ebe9ec, #cfcfcf);
+    width: 49.35%;
+    height: 80px;
+    border-radius: 10px 10px 0 0;
+    margin-left: 25%;
+    padding: 6px;
+}
+
+.top{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row; /* Cambia la dirección a "row" */
+    justify-content: flex-start; /* Alinea los elementos en el inicio horizontal */
+    text-align: center;
+}
+
+.top p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    margin-left: 30%;
+    text-align: center;
+    z-index: 10;
+}
+
+
+.rojo{
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #fc4645;   
+}
+
+.amarillo{
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #fcbe2b;
+    margin-left: 10px;
+}
+
+.verde{
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #26d23a;
+    margin-left: 10px;
+}
+
+.bottom{
+    display: flex;
+    padding-top: 0.5rem;
+    width: 100%;
+    height: auto;
+}
+
+.cuadrado {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    border: #000000 1px solid;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.dos {
+    margin-right: 25%;
+}
+
+.tres{
+    margin-left: 30%;
+}
+
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 27%; /* Ajusta el ancho aquí según tus necesidades */
+    height: auto; /* Ajusta la altura aquí según tus necesidades */
+    padding: 0.5%; /* Añade un poco de espacio interno para mejorar la apariencia */
+}
+
+.search-bar input[type="text"] {
+    text-align: left;
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    height: 100%; /* Ajusta la altura del campo de entrada para que coincida con la barra de búsqueda */
+}
+
+
+
+/* Estilos para el ícono de lupa */
+i {
+    color: #000000;
+    margin-right: 5px;
+}
+
+.mainscreen{
+    height: 500px;
+    margin-left: 25%;
+    display: flex;
+}
+
+.directories{
+    width: 200px;
+    height: 500px;
+    background-color: #26d23a;
+}
+
+.file_container {
+    width: 49%;
+    padding-top: 2%;
+    height: auto;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start; /* Ajusta el espacio vertical entre filas */
+}
+
+.file {
+    width: calc(30% - 30px);
+    text-align: center;
+    padding: 0 3%;
+    margin: 5px; /* Ajusta el margen para reducir la distancia vertical entre elementos */
+}
+
+
+
+
+.file img{
+    width: 70%;
+}
+
+.file p{
+    margin-top: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+/*
+¿Por qué es mejor hacer una web?
+Hacer una web te permite mostrar información, fotos, videos o interactuar con otros en línea. Es como tener tu propio espacio en internet para compartir lo que quieras con muchas personas.
+¿Por qué necesito un servidor en la red para mi web?
+Un servidor es como una computadora especial que almacena tu web y la muestra a las personas que la visitan en internet. Necesitas un servidor para que tu web esté disponible en línea todo el tiempo.
+¿Hay algún motivo más?
+Sí, tener una web te permite llegar a un público más amplio que si solo compartieras cosas en persona. Puedes alcanzar a personas de todo el mundo.
+¿Qué es cliente-servidor?
+Es como una conversación: el cliente (tu computadora o dispositivo) le pide algo al servidor (la computadora en internet), y el servidor responde proporcionando la información que solicitaste.
+¿Pueden ser dos ordenadores unidos por cable cliente-servidor?
+Sí, uno puede ser el cliente que solicita información y el otro el servidor que la proporciona, pero generalmente en internet, los servidores son computadoras más poderosas y están disponibles para muchas personas.
+¿Puede un ordenador aislado, sin internet, ser cliente y servidor?
+Sí, puede actuar como cliente y servidor dentro de una red local, pero no podrá conectarse a internet para servir a personas fuera de esa red.
+¿Puede un servidor también ser cliente de otro servidor?
+Sí, los servidores pueden solicitar información de otros servidores para mostrarla en tu web. Es como cuando un sitio web muestra un video de YouTube.
+¿Cómo se relacionan c-s en internet?
+La relación cliente-servidor es fundamental en internet. Tu navegador web (cliente) solicita páginas a servidores web que luego te muestran esas páginas.
+¿Por qué necesito usar protocolos?
+Los protocolos son reglas que permiten a las computadoras comunicarse de manera efectiva en internet. Ayudan a que la información se transmita correctamente entre cliente y servidor.
+¿Qué es TCP/IP?
+TCP/IP es un conjunto de protocolos que permiten la comunicación en internet. TCP garantiza que los datos lleguen sin errores, y IP dirige esos datos a la dirección correcta.
+¿Qué es un puerto TCP?
+Los puertos son como ventanas en una casa. Permiten que diferentes tipos de información entren y salgan de una computadora. TCP utiliza puertos para organizar la comunicación.
+¿Qué necesito para convertir mi PC en cliente web?
+Solo necesitas un navegador web, como Chrome o Firefox, instalado en tu PC para acceder a sitios web.
+¿Qué necesito para convertir mi PC en servidor web?
+Para convertir tu PC en un servidor web, necesitas software especializado, como Apache o Nginx, además de configurar tu red y asegurarte de que esté en línea todo el tiempo.
+¿Qué es HTTP?
+HTTP es un protocolo que permite la transferencia de datos en la web. Es lo que hace que puedas ver páginas web en tu navegador.
+
+
+
+
+¿Qué es una URL?
+Una URL es como la dirección de una casa en internet. Es lo que escribes en tu navegador para llegar a un sitio web específico.
+¿Si es por IP que se entienden por qué no se usan IPS en los mensajes?
+Las direcciones IP son difíciles de recordar, por lo que usamos URLs que son más fáciles de recordar y escribir.
+¿Cómo consigo que todo el mundo sepa el nuevo nombre de mi IP?
+Puedes registrar un dominio, que es como un nombre personalizado para tu IP, y luego promocionar ese dominio para que las personas lo conozcan.
+¿Si tengo mucho éxito porque necesito un CDN?
+Un CDN (Content Delivery Network) ayuda a acelerar la entrega de tu web a personas de todo el mundo, incluso si tienes muchos visitantes. Evita que tu servidor se sobrecargue.
+¿Por qué tenéis un proxy aquí, lo necesitamos también?
+Un proxy puede ayudar a proteger tu privacidad en línea y mejorar la velocidad de acceso a sitios web. Su necesidad depende de tu situación y preferencias.
+¿Si necesito un servidor porque no me dais una máquina y tengo que compartirla con otros?
+Compartir un servidor con otros es más eficiente y asequible. Las empresas de alojamiento web proporcionan servidores compartidos para que no tengas que administrar toda la máquina tú mismo.
+¿Subir el código es lo mismo que subir la web? Significa que el código está abierto? ¿que lo pueden leer?
+Subir el código de una web significa poner los archivos que la componen en un servidor para que otros puedan verla en internet. No necesariamente significa que el código esté abierto; puede ser público o privado.
+¿Para qué necesitas un FTP?
+FTP (File Transfer Protocol) es un método para transferir archivos a un servidor web. Se utiliza para cargar los archivos de tu web en el servidor.
+*/
