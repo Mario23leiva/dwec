@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Propina</title>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Calculadora de Propina</h2>
+        <form id="propinaForm">
+            <div class="mb-3">
+                <label for="cantidadComensales" class="form-label">Cantidad de Comensales</label>
+                <input type="number" class="form-control" id="cantidadComensales" name="cantidadComensales">
+            </div>
+            <div class="mb-3">
+                <label for="totalPagar" class="form-label">Total a Pagar</label>
+                <input type="text" class="form-control" id="totalPagar" name="totalPagar" required pattern="^\d+(\.\d{1,2})?$">
+                <small class="form-text text-muted">Ejemplo válido: 25.50</small>
+            </div>
+            <div class="mb-3">
+                <label for="opinionServicio" class="form-label">Opina sobre el Servicio</label>
+                <select class="form-select" id="opinionServicio" name="opinionServicio" required>
+                    <option value="genial">Genial</option>
+                    <option value="aceptable">Aceptable</option>
+                    <option value="horrible">Horrible</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular Propina</button>
+        </form>
+
+        <div id="resultado" class="mt-3"></div>
+    </div>
+
+    <script>
+        const propinaForm = document.getElementById('propinaForm');
+        const resultadoDiv = document.getElementById('resultado');
+
+        propinaForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const cantidadComensales = parseFloat(document.getElementById('cantidadComensales').value) || 1;
+            const totalPagar = parseFloat(document.getElementById('totalPagar').value);
+            const opinionServicio = document.getElementById('opinionServicio').value;
+
+            if (isNaN(totalPagar)) {
+                mostrarError('El campo "Total a Pagar" debe ser un número válido.');
+                return;
+            }
+
+            let propinaPorPersona = 0;
+
+            switch (opinionServicio) {
+                case 'genial':
+                    propinaPorPersona = (totalPagar * 0.10) / cantidadComensales;
+                    break;
+                case 'aceptable':
+                    propinaPorPersona = (totalPagar * 0.05) / cantidadComensales;
+                    break;
+                case 'horrible':
+                    propinaPorPersona = 0;
+                    break;
+                default:
+                    mostrarError('Selecciona una opción válida para "Opina sobre el Servicio".');
+                    return;
+            }
+
+            if (propinaPorPersona < 0.50) {
+                propinaPorPersona = 0.50;
+            }
+
+            mostrarResultado(`La propina por persona es de ${propinaPorPersona.toFixed(2)} €.`);
+            propinaForm.reset();
+        });
+
+        function mostrarResultado(mensaje) {
+            resultadoDiv.innerHTML = `<div class="alert alert-success">${mensaje}</div>`;
+        }
+
+        function mostrarError(mensaje) {
+            resultadoDiv.innerHTML = `<div class="alert alert-danger">${mensaje}</div>`;
+        }
+
+    </script>
+</body>
+</html>
