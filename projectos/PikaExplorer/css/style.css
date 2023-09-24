@@ -1,0 +1,61 @@
+*{
+    /*border: #333 1px solid;*/
+}
+
+
+.toptap{
+    background: linear-gradient(to bottom, #ebe9ec, #cfcfcf);
+    border-radius: 10px 10px 0 0;
+    height: 100px;
+}
+
+.top{
+    height: 30px;
+}
+
+.bottom{
+    height: auto;
+}
+
+.circulo {
+    width: 15px; /* Ancho de cada círculo */
+    height: 15px; /* Altura de cada círculo */
+    background-color: #007bff; /* Color de fondo de cada círculo */
+    border-radius: 50%; /* Hacer cada círculo circular */
+    margin: 0 5px;
+}
+
+.bg-rojo{
+    background-color: #fc4645;
+}
+
+.bg-amarillo{
+    background-color: #fcbe2b;
+}
+
+.bg-verde{
+    background-color: #26d23a;
+}
+
+.top .nickname, .top .projectname {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainscreen{
+    height: 500px;
+    margin-left: 25%;
+    display: flex;
+}
+
+.file-tree{
+    height: 100%;
+}
